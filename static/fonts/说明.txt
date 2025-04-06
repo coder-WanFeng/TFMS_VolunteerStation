@@ -1,0 +1,2 @@
+font1.ttf  为阿里妈妈东方大楷，是免费可商用字体，可从: https://fonts.alibabagroup.com/#/more 查看！
+font2.ttf  为阿里妈妈东方数黑，是免费可商用字体，可从: https://fonts.alibabagroup.com/#/more 查看！
