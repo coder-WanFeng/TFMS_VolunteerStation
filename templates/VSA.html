@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="/static/css/VSA.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/static/images/favicon.ico" >
+        <title>修改志愿服务活动</title>
+    </head>
+    <body>
+        {% if AlertInfo %}
+        <div id="AlertDiv">
+            <div id="AlertDivTitle">提示</div>
+            <div id="AlertDivExit" class="Exit"></div>
+            <div id="AlertDivInfo">{{AlertInfo}}</div>
+        </div>
+        {% endif %}
+        <form id="ChangeVolunteerServiceActivities" class="ToolDiv" action="" method="post" enctype="files">
+            <div class="ToolDivTitle" id="ChangeVSATitle">修改志愿服务活动</div>
+            <div id="Change-VSAName">
+                <span class="ToolText">活动名称:{{ChangeVSA_Name}}</span>
+            </div>
+            <div id="ChangeVSA-VSAPlace">
+                <span class="ToolText">活动地点:{{ChangeVSA_Place}}</span>
+            </div>
+            <div id="ChangeVSA-VSAContent">
+                <span class="ToolText">活动内容:{{ChangeVSA_Content}}</span>
+            </div>
+            <div id="ChangeVSA-VSAStartTime">
+                <span class="ToolText">开始时间:{{ChangeVSA_StartTime}}</span>
+            </div>
+            <div id="ChangeVSA-VSAEndTime">
+                <span class="ToolText">结束时间:{{ChangeVSA_EndTime}}</span>
+            </div>
+            <div id="ChangeVSA-VSATime">
+                <span class="ToolText">活动时长(分钟):{{ChangeVSA_Time}}</span>
+            </div>
+            <div id="ChangeVSA-VSAPromotionPoster">
+                <span class="ToolText">宣传图片:</span>
+                <a href="/file/VSAs@{{ChangeVSA_Name}}${{ChangeVSA_Place}}${{ChangeVSA_Content}}${{ChangeVSA_StartTime}}${{ChangeVSA_EndTime}}${{ChangeVSA_Time}}/" class="ToolInput" id="to_img" target="_blank">查看</a>
+            </div>
+            <input type="hidden" name="isTrue" id="is_true">
+        </form>
+        <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+        <script type="text/javascript" src="/static/javascript/ChangeVSA.js"></script>
+    </body>
+</html>
