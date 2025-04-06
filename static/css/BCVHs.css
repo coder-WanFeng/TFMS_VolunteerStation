@@ -1,0 +1,96 @@
+/* 导入字体 */
+@font-face {
+    font-family:'font1';
+    src:url('/static/fonts/font1.ttf');
+}
+@font-face {
+    font-family:'font2';
+    src:url('/static/fonts/font2.ttf');
+}
+/* 动画 */
+@keyframes ShowVI{
+    0%{
+        display:none;
+        opacity:0;
+    }
+    100%{
+        display:block;
+        opacity:1;
+    }
+}
+/* 真全局样式 */
+/* html{
+    cursor:url('/static/images/TFMS_min.png') 14 16,auto;
+} */
+/* a */
+a{
+    text-decoration:none;
+    color:#000000;
+}
+body{
+    margin:2px;
+}
+/* 内容样式 */
+div,span{
+    font-family:'font2';
+    font-size:1.3vw;
+}
+#VIs{
+    display:none;
+}
+.VI{
+    display:block;
+}
+#VI-Tip{
+    font-size:1vw;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
+#VolunteerInfo{
+    padding:0 1vw 0 1vw;
+}
+/* 提示框 */
+#AlertDiv{
+    height:40vh;
+    width:40vh;
+    top:30vh;
+    position:fixed;
+    left:50vw;
+    transform: translate(-50%,0);
+    margin:0 auto;
+    background-color:#FFFFFFEE;
+    border-color:#000000EE;
+    border-style:solid;
+    border-radius:3vh;
+    border-width:0.5vh;
+}
+#AlertDivTitle{
+    font-size:4.5vh;
+    font-family:'font1';
+    text-align:center;
+}
+#AlertDivInfo{
+    position:relative;
+    top:1.5vh;
+    font-size:2vh;
+    font-family:'font2';
+    text-align:center;
+    width:34vh;
+    margin:0 auto;
+}
+/* 退出按键 */
+.Exit{
+    position:absolute;
+    height:3vh;
+    width:3vh;
+    right:1vh;
+    top:1vh;
+    background-image:url('/static/images/Exit.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 0;
+}
+.Exit:hover{
+    background-image:url('/static/images/Exit_Hover.png');
+}

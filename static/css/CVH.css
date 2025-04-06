@@ -1,0 +1,238 @@
+/* 导入字体 */
+@font-face {
+    font-family:'font1';
+    src:url('/static/fonts/font1.ttf');
+}
+@font-face {
+    font-family:'font2';
+    src:url('/static/fonts/font2.ttf');
+}
+/* 真全局样式 */
+/* html{
+    cursor:url('/static/images/TFMS_min.png') 14 16,auto;
+} */
+/* <body> */
+body{
+    margin:0;
+}
+/* a */
+a{
+    text-decoration:none;
+    color:#000000;
+}
+/* 文本 */
+.text{
+    font-family:'font2';
+}
+/* 用户信息 */
+#UserInfo{
+    font-size:3vh;
+    border-color:#000000;
+    border-width:0 0 0.3vh 0;
+    border-radius:0 0 1.35vh 1.35vh;
+    border-style:solid;
+}
+.UserInfo{
+    position:relative;
+    left:3vh;
+    width:fit-content;
+}
+/* 志愿服务信息 */
+/* 查看证明材料 */
+#A-OpenEM{
+    display:block;
+    font-size:2.5vh;
+    height:3vh;
+    width:16vh;
+    background-color:#FFFFFFEE;
+    border-color:#000000EE;
+    border-width:0.3vh;
+    border-radius:1vh;
+    border-style:solid;
+    text-align:center;
+}
+#A-OpenEM:hover{
+    background-color:#EEEEEEDD;
+    border-color:#000000EE;
+}
+#UserInfo-Tip,#VolunteerInfo-Tip{
+    font-size:3.5vh;
+    margin:0 auto;
+    text-align:center;
+}
+#VolunteerInfo-Tip{
+    font-size:4vh;
+}
+#VolunteerInfo{
+    padding:0.5vh 2vh 0 2vh;
+    border-color:#000000;
+    border-width:0.3vh 0 0 0;
+    border-radius:1.35vh 1.35vh 0 0;
+    border-style:solid;
+    font-size:3.5vh;
+}
+/* 提示框 */
+#AlertDiv{
+    height:40vh;
+    width:40vh;
+    top:30vh;
+    position:fixed;
+    left:50vw;
+    transform: translate(-50%,0);
+    margin:0 auto;
+    background-color:#FFFFFFEE;
+    border-color:#000000EE;
+    border-style:solid;
+    border-radius:3vh;
+    border-width:0.5vh;
+}
+#AlertDivTitle{
+    font-size:4.5vh;
+    font-family:'font1';
+    text-align:center;
+}
+#AlertDivInfo{
+    position:relative;
+    top:1.5vh;
+    font-size:2vh;
+    font-family:'font2';
+    text-align:center;
+    width:34vh;
+    margin:0 auto;
+}
+/* 退出按键 */
+.Exit{
+    position:absolute;
+    height:3vh;
+    width:3vh;
+    right:1vh;
+    top:1vh;
+    background-image:url('/static/images/Exit.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 0;
+}
+.Exit:hover{
+    background-image:url('/static/images/Exit_Hover.png');
+}
+/* 返回提示 */
+#BackTip{
+    position:absolute;
+    transform: translate(-50%,0);
+    left:50vw;
+    bottom:17.25vh;
+    font-family:'font1';
+}
+/* 返回信息 */
+/* 验证框 */
+#C-Login-Tip{
+    font-size:3.5vh;
+}
+#C-LoginDiv{
+    position:absolute;
+    bottom:0;
+    height:16.5vh;
+    width:100%;
+    border-color:#000000;
+    border-width:0.5vh 0 0 0;
+    border-radius:0 0 3vh 3vh;
+    border-style:solid;
+    margin:0 auto;
+    text-align:center;
+    font-size:3vh;
+    font-family:'font1';
+}
+/* 输入框 */
+.Input{
+    height:3vh;
+    width:24vh;
+    font-family:'font1';
+    border-color:#000000EE;
+    border-style:solid;
+    border-radius:1vh;
+    border-width:0.3vh;
+    font-size:2.5vh;
+    background-color:#FFFFFF00;
+}
+.Time,.Date,.Place,.Content{
+    margin:0.5vh 0 0.5vh 0;
+    height:4vh;
+    width:56vh;
+    font-family:'font2';
+    border-color:#000000EE;
+    border-style:solid;
+    border-radius:1.5vh;
+    border-width:0.5vh;
+    font-size:3vh;
+    background-color:#FFFFFF00;
+}
+/* 返回按键 */
+#Back{
+    display:block;
+    position:absolute;
+    right:1vh;
+    top:1vh;
+    height:3vh;
+    width:6vh;
+    font-size:2.5vh;
+    border-width:0.35vh;
+    border-radius:1.5vh;
+    border-style:solid;
+    border-color:#16bff4;
+    background-color:#FFFFFFEE;
+    text-align:center;
+    font-family:'font1';
+}
+#Back:hover{
+    border-color:#16c0f4EE;
+    background-color:#EEEEEEDD;
+}
+/* 提交按键 */
+#CLS{
+    margin:0 auto;
+    display:block;
+    font-family:'font1';
+    position:absolute;
+    /* font-size:2.25vh; */
+    /* height:2.5vh; */
+    font-size:2.5vh;
+    height:4vh;
+    width:24vh;
+    left:50vw;
+    transform: translate(-115%,0);
+    border-width:0.35vh;
+    border-radius:2vh;
+    border-style:solid;
+    border-color:#16bff4EE;
+    text-align:center;
+    color:#000000DD;
+    background-color:#FFFFFFBB;
+}
+#CLS:hover{
+    color:#000000;
+    background-color:#EEEEEEBB;
+}
+#CLS-False{
+    margin:0 auto;
+    display:block;
+    font-family:'font1';
+    position:absolute;
+    /* font-size:2.25vh; */
+    /* height:2.5vh; */
+    font-size:2.5vh;
+    height:4vh;
+    width:24vh;
+    left:50vw;
+    transform: translate(15%,0);
+    border-width:0.35vh;
+    border-radius:2vh;
+    border-style:solid;
+    border-color:#16bff4EE;
+    text-align:center;
+    color:#000000DD;
+    background-color:#FFFFFFBB;
+}
+#CLS-False:hover{
+    color:#000000;
+    background-color:#EEEEEEBB;
+}

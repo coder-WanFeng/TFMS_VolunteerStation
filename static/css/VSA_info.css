@@ -1,0 +1,52 @@
+/* 导入字体 */
+@font-face {
+    font-family:'font1';
+    src:url('/static/fonts/font1.ttf');
+}
+@font-face {
+    font-family:'font2';
+    src:url('/static/fonts/font2.ttf');
+}
+/* 动画 */
+@keyframes ShowVI{
+    0%{
+        display:none;
+        opacity:0;
+    }
+    100%{
+        display:block;
+        opacity:1;
+    }
+}
+/* 真全局样式 */
+/* html{
+    cursor:url('/static/images/TFMS_min.png') 14 16,auto;
+} */
+/* a */
+a{
+    text-decoration:none;
+    color:#000000;
+}
+body{
+    margin:2px;
+}
+/* 内容样式 */
+div,span{
+    font-family:'font2';
+    font-size:1.3vw;
+}
+#VSAs,#is_admin{
+    display:none;
+}
+.VSA{
+    display:block;
+}
+.Tip{
+    font-size:1vw;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
+#VSA_Info{
+    padding:0 1vw 0 1vw;
+}
