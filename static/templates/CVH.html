@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="/static/css/CVH.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/static/images/favicon.ico" >
+        <title>查改志愿服务信息</title>
+    </head>
+    <body>
+        <div id="top">
+            <div style="display:none">{{t}}</div>
+        </div>
+        <div id="body">
+            {% if AlertInfo %}
+            <div id="AlertDiv">
+                <div id="AlertDivTitle">提示</div>
+                <div id="AlertDivExit" class="Exit"></div>
+                <div id="AlertDivInfo">{{AlertInfo}}</div>
+            </div>
+            {% endif %}
+            <div id="VI">
+                <div id="UserInfo" class="text">
+                    <a id="Back" href="/BCVH">返回</a>
+                    <div id="UserInfo-Tip">用户信息</div>
+                    <div id="Username" class='UserInfo'>用户名:{{username}}</div>
+                    <div id="ID" class='UserInfo'>昵称:{{ID}}</div>
+                    <div id="SN" class='UserInfo'>学号:{{SN}}</div>
+                </div>
+                <div id="VolunteerInfo" class="text">
+                    <div id="VolunteerInfo-Tip">志愿服务信息</div>
+                    <span>时长:</span><input class="Time" value="{{Time}}" type="number" autocomplete="off">
+                    <br>
+                    <span>日期:</span><input class="Date" value="{{Date}}" type="date" autocomplete="off">
+                    <br>
+                    <span>地点:</span><input class="Place" value="{{Place}}" autocomplete="off">
+                    <br>
+                    <span>内容:</span><input class="Content" value="{{Content}}" autocomplete="off">
+                    <br>
+                    <a id="A-OpenEM" href="/file/{{EM}}" target="_blank">查看证明材料</a>
+                </div>
+            </div>
+            <!-- <div id="BackTip" class="text">返回请按"查询"键</div> -->
+            <div id="Change">
+                <div id="C-LoginDiv">
+                    <div id="C-Login-Tip">提交志愿服务信息时需要验证身份!</div>
+                    <form id="Change-Login" class="C-Login" action="" method="post" autocomplete="off">
+                        <input id="VI-info" value="{{t}}" type="hidden" autocomplete="off">
+                        <input type="hidden" name="username" value="{{username}}" autocomplete="off">
+                        <input type="hidden" name="ID" value="{{ID}}" autocomplete="off">
+                        <input type="hidden" name="SN" value="{{SN}}" autocomplete="off">
+                        <input class="Time" type="hidden" name="Time" value="{{Time}}" autocomplete="off">
+                        <input class="Date" type="hidden" name="Date" value="{{Date}}" autocomplete="off">
+                        <input class="Place" type="hidden" name="Place" value="{{Place}}" autocomplete="off">
+                        <input class="Content" type="hidden" name="Content" value="{{Content}}" autocomplete="off">
+                        <input type="hidden" name="EM" value="{{EM}}" autocomplete="off">
+                        <input type="hidden" name="IsTrue" value="unknown" autocomplete="off" id="VHIsTrue">
+                        <span>管理员账号:</span><input class="Input" id="CLUsername" name="AdminUsername" autocomplete="off">
+                        <br>
+                        <span>管理员密码:</span><input class="Input" id="CLPassword" name="AdminPassword" type="password" autocomplete="off">
+                        <br>
+                        <input id="CLS" type="submit" value="提交志愿服务信息"></input>
+                        <input id="CLS-False" type="submit" value="删除志愿服务信息"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/static/javascript/jquery.js"></script>
+        <script type="text/javascript" src="/static/javascript/CVH.js"></script>
+    </body>
+</html>
